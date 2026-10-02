@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Neon Cyber Oni Oversized Tee",
+      "category": "anime",
+      "price": 38.00,
+      "rating": 4.9,
+      "image": "assets/images/oni.jpg",
+      "badge": "Bestseller",
+      "description": "Hand-dyed washed black heavyweight cotton tee featuring an original hand-painted cyberpunk mask graphic with electric lime accent highlights.",
+      "sizes": ["S", "M", "L", "XL", "2XL"],
+      "colors": ["Washed Black", "Charcoal"],
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Muted Lavender Dreamscape",
+      "category": "streetwear",
+      "price": 34.00,
+      "rating": 4.8,
+      "image": "assets/images/dreamscape.jpg",
+      "badge": "New Drop",
+      "description": "Soft gradient tie-dye tee in muted lavender and off-white tones with minimalist abstract eye illustration on the chest.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Lavender", "Off-White"],
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Acid Smoke Graphic Tee",
+      "category": "art",
+      "price": 42.00,
+      "rating": 5.0,
+      "image": "assets/images/smoke.jpg",
+      "badge": "Limited 1/25",
+      "description": "Hand-painted organic smoke swirls using eco-friendly textile inks. Each piece features unique dye patterns.",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Charcoal", "Washed Black"],
+      "inStock": true
+    },
+    {
+      "id": 4,
+      "name": "Glitch ASCII Smiley Tee",
+      "category": "streetwear",
+      "price": 30.00,
+      "rating": 4.7,
+      "image": "assets/images/smiley.jpg",
+      "badge": "Popular",
+      "description": "Bold typography and glitch art printed and hand-distressed on an off-white heavy cotton relaxed fit tee.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Off-White"],
+      "inStock": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How does pricing work for custom tees?",
+      "a": "Base custom tees start at $25. Final pricing is calculated based on design complexity, shirt color/wash treatment, number of print placements, and size requirements."
+    },
+    {
+      "q": "What is the turnaround time?",
+      "a": "Because every shirt is hand-dyed and hand-painted to order, please allow 7-14 business days for production before shipping."
+    },
+    {
+      "q": "Can I provide my own artwork or garment?",
+      "a": "Yes! You can upload your reference artwork in the Custom Order builder. For customer-provided garments, contact us directly for approval."
+    }
+  ]
+}

@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ink & Dye Tees | Handmade Custom Streetwear</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#FAF9F5] text-[#1A1A1A] antialiased selection:bg-[#D4FF00] selection:text-black"
+  >
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-[#1A1A1A] text-[#FAF9F5] text-xs font-semibold py-2 px-4 text-center tracking-wider"
+    >
+      ⚡ FREE SHIPPING ON ORDERS OVER $75 • EVERY TEE IS 100% HAND-DYED & UNIQUE
+    </div>
+
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-[#1A1A1A] text-[#FAF9F5] text-xs font-semibold py-2 px-4 text-center tracking-wider"
+    >
+      ⚡ FREE SHIPPING ON ORDERS OVER $75 • EVERY TEE IS 100% HAND-DYED & UNIQUE
+    </div>
+
+    <!-- Navigation Header -->
+    <header
+      class="sticky top-0 z-40 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-black/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <a
+          href="#"
+          onclick="showPage('home')"
+          class="text-2xl font-black tracking-tighter flex items-center gap-2"
+        >
+          <span
+            class="w-4 h-4 rounded-full bg-[#D4FF00] border-2 border-black"
+          ></span>
+          INK & DYE <span class="text-neutral-500 font-light">TEES</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+          <a
+            href="#"
+            onclick="showPage('home')"
+            class="nav-link hover:text-black text-neutral-600 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            onclick="showPage('shop')"
+            class="nav-link hover:text-black text-neutral-600 transition"
+            >Shop Designs</a
+          >
+          <a
+            href="#"
+            onclick="showPage('custom')"
+            class="nav-link hover:text-black text-neutral-600 transition"
+            >Custom Order</a
+          >
+          <a
+            href="#"
+            onclick="showPage('about')"
+            class="nav-link hover:text-black text-neutral-600 transition"
+            >About</a
+          >
+          <a
+            href="#"
+            onclick="showPage('faq')"
+            class="nav-link hover:text-black text-neutral-600 transition"
+            >FAQ</a
+          >
+          <a
+            href="#"
+            onclick="showPage('contact')"
+            class="nav-link hover:text-black text-neutral-600 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <button
+            onclick="toggleApiModal()"
+            class="hidden lg:flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-full bg-neutral-200 hover:bg-neutral-300 transition"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            API Inspector
+          </button>
+          <button
+            onclick="toggleCart()"
+            class="relative p-2.5 rounded-full bg-black text-[#FAF9F5] hover:bg-neutral-800 transition flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"
+              />
+            </svg>
+            <span
+              id="cart-badge"
+              class="absolute -top-1 -right-1 bg-[#D4FF00] text-black text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-black"
+              >0</span
+            >
+          </button>
+          <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-50 bg-[#FAF9F5] hidden flex-col p-6"
+    >
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-xl font-black">MENU</span>
+        <button onclick="toggleMobileMenu()" class="p-2 text-2xl font-bold">
+          ×
+        </button>
+      </div>
+      <div class="flex flex-col gap-6 text-xl font-bold">
+        <a
+          href="#"
+          onclick="
+            showPage('home');
+            toggleMobileMenu();
+          "
+          >Home</a
+        >
+        <a
+          href="#"
+          onclick="
+            showPage('shop');
+            toggleMobileMenu();
+          "
+          >Shop Designs</a
+        >
+        <a
+          href="#"
+          onclick="
+            showPage('custom');
+            toggleMobileMenu();
+          "
+          >Custom Order</a
+        >
+        <a
+          href="#"
+          onclick="
+            showPage('about');
+            toggleMobileMenu();
+          "
+          >About</a
+        >
+        <a
+          href="#"
+          onclick="
+            showPage('faq');
+            toggleMobileMenu();
+          "
+          >FAQ</a
+        >
+        <a
+          href="#"
+          onclick="
+            showPage('contact');
+            toggleMobileMenu();
+          "
+          >Contact</a
+        >
+        <a
+          href="#"
+          onclick="
+            toggleApiModal();
+            toggleMobileMenu();
+          "
+          class="text-[#8B5CF6]"
+          >API & DB Inspector</a
+        >
+      </div>
+    </div>
+
+    <!-- MAIN VIEWS CONTAINER -->
+    <main id="app-container">
+      <!-- HOME VIEW -->
+      <section id="view-home" class="view-section">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <span
+              class="inline-block px-3 py-1 rounded-full bg-[#E6D7FF] text-[#6B21A8] font-bold text-xs uppercase tracking-wider mb-6"
+              >Hand-Dyed & Hand-Painted Streetwear</span
+            >
+            <h1
+              class="text-5xl sm:text-7xl font-black tracking-tight leading-none mb-6"
+            >
+              Wear Your Imagination.
+            </h1>
+            <p class="text-lg text-neutral-600 mb-8 leading-relaxed">
+              Unique, one-of-a-kind anime, art, and streetwear custom tees.
+              Handcrafted with eco-friendly textile inks and custom wash
+              treatments.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button
+                onclick="showPage('shop')"
+                class="px-8 py-4 bg-black text-[#FAF9F5] font-bold rounded-full hover:bg-neutral-800 transition shadow-lg"
+              >
+                Shop Designs
+              </button>
+              <button
+                onclick="showPage('custom')"
+                class="px-8 py-4 bg-[#D4FF00] text-black font-bold rounded-full hover:bg-[#c2eb00] transition border-2 border-black shadow-lg"
+              >
+                Custom Tee Builder
+              </button>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="w-full h-[450px] bg-gradient-to-tr from-[#E6D7FF] to-[#D4FF00] rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center overflow-hidden relative"
+            >
+              <div class="absolute inset-0 bg-neutral-900/10"></div>
+              <div class="text-center p-8 z-10">
+                <span
+                  class="text-xs uppercase font-extrabold tracking-widest bg-black text-white px-3 py-1 rounded-full"
+                  >Featured Collection</span
+                >
+                <h2 class="text-3xl font-black mt-4 text-black">
+                  Neon Cyber Oni Oversized Tee
+                </h2>
+                <p class="text-neutral-800 font-semibold mt-2">
+                  $38.00 • Hand-Dyed Washed Black
+                </p>
+                <button
+                  onclick="addToCart(1)"
+                  class="mt-6 px-6 py-3 bg-black text-white rounded-full font-bold text-sm hover:bg-neutral-800 transition"
+                >
+                  Quick Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Products Preview -->
+        <div class="bg-white py-16 border-y border-black/10">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+              <div>
+                <span
+                  class="text-xs font-bold text-neutral-400 uppercase tracking-widest"
+                  >Handcrafted Drop</span
+                >
+                <h2 class="text-3xl font-black tracking-tight">
+                  Trending Right Now
+                </h2>
+              </div>
+              <button
+                onclick="showPage('shop')"
+                class="font-bold underline hover:text-neutral-600"
+              >
+                View All Designs →
+              </button>
+            </div>
+            <div
+              id="home-featured-grid"
+              class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            >
+              <!-- Populated via JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: SHOP -->
+      <section
+        id="view-shop"
+        class="tab-content hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
+      >
+        <div class="mb-10 text-center max-w-2xl mx-auto">
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl">
+            The Catalog
+          </h1>
+          <p class="text-charcoal/70 mt-3 text-base sm:text-lg">
+            Explore our hand-dyed and hand-painted streetwear tees. Filter by
+            vibe or category below.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+          <button
+            onclick="filterCatalog('All')"
+            class="category-btn active-filter bg-charcoal text-offwhite font-display font-bold px-5 py-2.5 rounded-xl border-2 border-charcoal shadow-genz-sm text-sm transition-all"
+          >
+            All Drops
+          </button>
+          <button
+            onclick="filterCatalog('Anime')"
+            class="category-btn bg-offwhite text-charcoal font-display font-bold px-5 py-2.5 rounded-xl border-2 border-charcoal shadow-genz-sm text-sm hover:bg-lavender transition-all"
+          >
+            Anime Vibes
+          </button>
+          <button
+            onclick="filterCatalog('Streetwear')"
+            class="category-btn bg-offwhite text-charcoal font-display font-bold px-5 py-2.5 rounded-xl border-2 border-charcoal shadow-genz-sm text-sm hover:bg-lavender transition-all"
+          >
+            Streetwear
+          </button>
+          <button
+            onclick="filterCatalog('Abstract')"
+            class="category-btn bg-offwhite text-charcoal font-display font-bold px-5 py-2.5 rounded-xl border-2 border-charcoal shadow-genz-sm text-sm hover:bg-lavender transition-all"
+          >
+            Abstract Art
+          </button>
+          <button
+            onclick="filterCatalog('Tie-Dye')"
+            class="category-btn bg-offwhite text-charcoal font-display font-bold px-5 py-2.5 rounded-xl border-2 border-charcoal shadow-genz-sm text-sm hover:bg-lavender transition-all"
+          >
+            Classic Tie-Dye
+          </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div
+          id="shop-products-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- CUSTOM ORDER VIEW -->
+      <section id="view-custom" class="view-section hidden">
+        <div class="max-w-4xl mx-auto px-4 py-12">
+          <div class="text-center mb-12">
+            <span
+              class="px-3 py-1 rounded-full bg-[#D4FF00] text-black font-bold text-xs uppercase tracking-wider"
+              >Custom Studio</span
+            >
+            <h1
+              class="text-4xl sm:text-5xl font-black tracking-tight mt-4 mb-2"
+            >
+              Design Your Custom Tee
+            </h1>
+            <p class="text-neutral-600">
+              Submit your artwork and specifications. Base price starts at $25;
+              final quote depends on complexity and size.
+            </p>
+          </div>
+
+          <form
+            onsubmit="submitCustomOrder(event)"
+            class="bg-white p-8 sm:p-12 rounded-3xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] grid gap-6"
+          >
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block font-bold text-sm mb-2">Your Name</label>
+                <input
+                  type="text"
+                  required
+                  name="customer_name"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                  placeholder="Alex Rivers"
+                />
+              </div>
+              <div>
+                <label class="block font-bold text-sm mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  required
+                  name="email"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                  placeholder="alex@example.com"
+                />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+              <div>
+                <label class="block font-bold text-sm mb-2">Shirt Size</label>
+                <select
+                  name="size"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black font-medium"
+                >
+                  <option>XS</option>
+                  <option>S</option>
+                  <option>M</option>
+                  <option selected>L</option>
+                  <option>XL</option>
+                  <option>2XL</option>
+                  <option>3XL</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-sm mb-2"
+                  >Shirt Color / Wash</label
+                >
+                <select
+                  name="shirt_color"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black font-medium"
+                >
+                  <option>Washed Black</option>
+                  <option>Off-White / Cream</option>
+                  <option>Charcoal Grey</option>
+                  <option>Muted Lavender Tie-Dye</option>
+                  <option>Acid Wash Custom</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-sm mb-2">Placement</label>
+                <select
+                  name="placement"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black font-medium"
+                >
+                  <option>Center Chest</option>
+                  <option>Full Back + Small Front</option>
+                  <option>Left Chest Minimal</option>
+                  <option>Sleeve Accent</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block font-bold text-sm mb-2"
+                  >Design Image Upload / Reference</label
+                >
+                <input
+                  type="file"
+                  id="custom-file-input"
+                  onchange="previewImage(event)"
+                  class="w-full px-4 py-2.5 rounded-xl bg-neutral-50 border border-black/20 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-black file:text-white hover:file:bg-neutral-800"
+                />
+              </div>
+              <div>
+                <label class="block font-bold text-sm mb-2"
+                  >Preferred Ink Colors</label
+                >
+                <input
+                  type="text"
+                  name="preferred_colors"
+                  placeholder="e.g., Electric lime, neon pink, black"
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                />
+              </div>
+            </div>
+
+            <!-- Image Preview Box -->
+            <div
+              id="image-preview-container"
+              class="hidden p-4 rounded-2xl bg-neutral-100 border border-dashed border-black/30 flex items-center gap-4"
+            >
+              <img
+                id="upload-preview-img"
+                class="w-20 h-20 object-cover rounded-xl border border-black"
+              />
+              <div>
+                <span class="font-bold text-sm block"
+                  >Uploaded Reference Attached</span
+                >
+                <span class="text-xs text-neutral-500"
+                  >Ready for artist evaluation and custom stencil
+                  generation.</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-bold text-sm mb-2"
+                >Additional Notes / Special Requests</label
+              >
+              <textarea
+                name="notes"
+                rows="3"
+                class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                placeholder="Describe any specific vibes, distressing preferences, or placement notes..."
+              ></textarea>
+            </div>
+
+            <div
+              class="p-4 bg-[#FAF9F5] rounded-2xl border border-black/10 flex justify-between items-center"
+            >
+              <div>
+                <span class="text-xs text-neutral-500 block uppercase font-bold"
+                  >Estimated Quote</span
+                >
+                <span class="text-2xl font-black"
+                  >$35.00
+                  <span class="text-xs font-normal text-neutral-600"
+                    >(Base $25 + Complexity)</span
+                  ></span
+                >
+              </div>
+              <button
+                type="submit"
+                class="px-8 py-4 bg-black text-[#FAF9F5] font-bold rounded-full hover:bg-neutral-800 transition shadow-md"
+              >
+                Request Quote & Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ABOUT VIEW -->
+      <section id="view-about" class="view-section hidden">
+        <div class="max-w-5xl mx-auto px-4 py-16">
+          <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <span
+                class="px-3 py-1 rounded-full bg-[#E6D7FF] text-[#6B21A8] font-bold text-xs uppercase tracking-wider"
+                >Our Story</span
+              >
+              <h1
+                class="text-4xl sm:text-5xl font-black tracking-tight mt-4 mb-6"
+              >
+                Art You Can Wear. Handmade in the Studio.
+              </h1>
+              <p class="text-neutral-600 mb-4 leading-relaxed">
+                Ink & Dye Tees was born out of a passion for indie anime
+                culture, underground streetwear, and tactile craftsmanship. We
+                believe fast fashion is soulless—every tee we make is hand-dyed,
+                hand-painted, and individually inspected.
+              </p>
+              <p class="text-neutral-600 leading-relaxed">
+                Using eco-friendly water-based textile inks and custom wash
+                formulas, our pieces achieve a vintage, lived-in feel that gets
+                better with every wash.
+              </p>
+            </div>
+            <div
+              class="bg-[#D4FF00] p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+            >
+              <h3 class="text-2xl font-black mb-4">The Handmade Process</h3>
+              <ul class="space-y-4 font-medium text-sm">
+                <li class="flex items-start gap-3">
+                  ⚡ <strong>1. Garment Prep:</strong> Heavyweight 100%
+                  ring-spun cotton sourced for premium drape.
+                </li>
+                <li class="flex items-start gap-3">
+                  🎨 <strong>2. Hand-Dyeing:</strong> Custom tie-dye and mineral
+                  wash baths mixed by hand.
+                </li>
+                <li class="flex items-start gap-3">
+                  🖌️ <strong>3. Hand-Painting:</strong> Original stencils and
+                  brushwork applied with archival textile inks.
+                </li>
+                <li class="flex items-start gap-3">
+                  🔥 <strong>4. Heat-Curing:</strong> Permanent heat setting for
+                  maximum wash durability.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ VIEW -->
+      <section id="view-faq" class="view-section hidden">
+        <div class="max-w-3xl mx-auto px-4 py-16">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl font-black tracking-tight mb-2">
+              Frequently Asked Questions
+            </h1>
+            <p class="text-neutral-600">
+              Everything you need to know about our handmade tees, shipping, and
+              custom orders.
+            </p>
+          </div>
+          <div id="faq-container" class="space-y-4">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT VIEW -->
+      <section id="view-contact" class="view-section hidden">
+        <div class="max-w-4xl mx-auto px-4 py-16">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl font-black tracking-tight mb-2">
+              Get in Touch
+            </h1>
+            <p class="text-neutral-600">
+              Have questions about an order or collaboration? Drop us a line.
+            </p>
+          </div>
+          <div
+            class="grid md:grid-cols-2 gap-12 bg-white p-8 sm:p-12 rounded-3xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+          >
+            <form onsubmit="submitContact(event)" class="grid gap-6">
+              <div>
+                <label class="block font-bold text-sm mb-2">Name</label>
+                <input
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                />
+              </div>
+              <div>
+                <label class="block font-bold text-sm mb-2">Email</label>
+                <input
+                  type="email"
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                />
+              </div>
+              <div>
+                <label class="block font-bold text-sm mb-2">Message</label>
+                <textarea
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-black/20 focus:outline-none focus:border-black"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="px-6 py-3 bg-black text-white font-bold rounded-xl hover:bg-neutral-800 transition"
+              >
+                Send Message
+              </button>
+            </form>
+            <div class="flex flex-col justify-between">
+              <div>
+                <h3 class="font-black text-xl mb-4">Studio Info</h3>
+                <p class="text-neutral-600 text-sm mb-6">
+                  Studio Hours: Mon-Fri 10am - 6pm EST<br />Email:
+                  support@inkandyetees.com<br />Location: Brooklyn, NY
+                </p>
+                <h3 class="font-black text-xl mb-3">Newsletter</h3>
+                <p class="text-neutral-600 text-sm mb-4">
+                  Join for early access to limited drops and secret discount
+                  codes.
+                </p>
+                <div class="flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="px-4 py-2 rounded-xl bg-neutral-50 border border-black/20 text-sm flex-1"
+                  />
+                  <button
+                    onclick="alert('Subscribed successfully!')"
+                    class="px-4 py-2 bg-[#D4FF00] font-bold text-black text-sm rounded-xl border border-black"
+                  >
+                    Join
+                  </button>
+                </div>
+              </div>
+              <div class="flex gap-4 mt-8 pt-6 border-t border-black/10">
+                <a href="#" class="font-bold text-sm hover:underline"
+                  >Instagram</a
+                >
+                <a href="#" class="font-bold text-sm hover:underline">TikTok</a>
+                <a href="#" class="font-bold text-sm hover:underline"
+                  >Discord</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SHOPPING CART SLIDE-OVER -->
+    <div
+      id="cart-drawer"
+      class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl border-l border-black/10 transform translate-x-full transition-transform duration-300 flex flex-col"
+    >
+      <div
+        class="p-6 border-b border-black/10 flex justify-between items-center bg-[#FAF9F5]"
+      >
+        <h2 class="text-xl font-black">
+          Your Shopping Cart (<span id="cart-count-header">0</span>)
+        </h2>
+        <button onclick="toggleCart()" class="text-2xl font-bold p-2">×</button>
+      </div>
+      <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <!-- Populated via JS -->
+        <p class="text-neutral-500 text-center py-12">Your cart is empty.</p>
+      </div>
+      <div class="p-6 border-t border-black/10 bg-[#FAF9F5]">
+        <div class="flex justify-between items-center mb-4 font-bold text-lg">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <p class="text-xs text-neutral-500 mb-4">
+          Shipping and custom rates calculated at checkout.
+        </p>
+        <button
+          onclick="checkout()"
+          class="w-full py-4 bg-black text-white font-bold rounded-2xl hover:bg-neutral-800 transition shadow-lg"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- API & DB INSPECTOR MODAL -->
+    <div
+      id="api-modal"
+      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-neutral-900 text-neutral-100 w-full max-w-2xl rounded-3xl border-2 border-[#D4FF00] overflow-hidden shadow-2xl"
+      >
+        <div
+          class="p-6 bg-neutral-950 border-b border-neutral-800 flex justify-between items-center"
+        >
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-[#D4FF00] animate-ping"></span>
+            <h3 class="font-bold text-lg text-white">
+              Live API & Architecture Inspector
+            </h3>
+          </div>
+          <button
+            onclick="toggleApiModal()"
+            class="text-neutral-400 hover:text-white text-xl font-bold"
+          >
+            ×
+          </button>
+        </div>
+        <div
+          class="p-6 space-y-6 max-h-[70vh] overflow-y-auto font-mono text-xs"
+        >
+          <div>
+            <span class="text-[#D4FF00] font-bold block mb-2"
+              >▶ GET /api/products</span
+            >
+            <div
+              id="api-response-products"
+              class="p-4 bg-black/60 rounded-xl border border-neutral-800 text-emerald-400 overflow-x-auto"
+            >
+              Loading data store...
+            </div>
+          </div>
+          <div>
+            <span class="text-[#D4FF00] font-bold block mb-2"
+              >▶ ARCHITECTURE & SQLITE MIGRATION READY</span
+            >
+            <p class="text-neutral-400 leading-relaxed">
+              Data is currently read from
+              <code class="text-purple-400">data/products.json</code> via
+              Express backend routes (<code class="text-purple-400"
+                >server/server.js</code
+              >). To plug in SQLite, simply run
+              <code class="text-white">npm run db:init</code> using the provided
+              <code class="text-white">database/schema.sql</code> file.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-black text-[#FAF9F5] border-t border-neutral-800 pt-16 pb-12 mt-20"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12"
+      >
+        <div>
+          <span
+            class="text-xl font-black tracking-tighter flex items-center gap-2 mb-4"
+          >
+            <span class="w-3 h-3 rounded-full bg-[#D4FF00]"></span> INK & DYE
+            TEES
+          </span>
+          <p class="text-neutral-400 text-sm leading-relaxed">
+            Hand-painted & hand-dyed custom streetwear for art and anime fans.
+            One-of-a-kind wearable masterpieces.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-sm tracking-wider uppercase">
+            Quick Links
+          </h4>
+          <ul class="space-y-2 text-sm text-neutral-400">
+            <li>
+              <a href="#" onclick="showPage('shop')" class="hover:text-white"
+                >Shop Designs</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showPage('custom')" class="hover:text-white"
+                >Custom Tee Studio</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showPage('about')" class="hover:text-white"
+                >Our Story & Process</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showPage('faq')" class="hover:text-white"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-sm tracking-wider uppercase">
+            Customer Care
+          </h4>
+          <ul class="space-y-2 text-sm text-neutral-400">
+            <li>
+              <a href="#" onclick="showPage('faq')" class="hover:text-white"
+                >Shipping & Turnaround</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showPage('faq')" class="hover:text-white"
+                >Garment Care Guide</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showPage('faq')" class="hover:text-white"
+                >Returns & Exchanges</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4 text-sm tracking-wider uppercase">
+            Developer
+          </h4>
+          <button
+            onclick="toggleApiModal()"
+            class="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-xs font-bold rounded-xl text-[#D4FF00] transition"
+          >
+            Inspect Backend & API
+          </button>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 text-center text-xs text-neutral-500"
+      >
+        &copy; 2026 Ink & Dye Tees Studio. All rights reserved. Original artwork
+        & custom hand-dyed garments.
+      </div>
+    </footer>
+
+    <!-- Frontend Application Logic -->
+    <script>
+      let appData = { products: [], faqs: [] };
+      let cart = [];
+
+      async function initApp() {
+        try {
+          const res = await fetch("/data/products.json");
+          appData = await res.json();
+          renderHomeFeatured();
+          renderShopGrid();
+          renderFaqs();
+          updateApiInspector();
+        } catch (e) {
+          console.error("Failed to load products.json", e);
+        }
+      }
+
+      function showPage(pageId) {
+        document
+          .querySelectorAll(".view-section")
+          .forEach((el) => el.classList.add("hidden"));
+        document.getElementById("view-" + pageId).classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      }
+
+      function toggleCart() {
+        const drawer = document.getElementById("cart-drawer");
+        drawer.classList.toggle("translate-x-full");
+      }
+
+      function toggleApiModal() {
+        const modal = document.getElementById("api-modal");
+        modal.classList.toggle("hidden");
+      }
+
+      function updateApiInspector() {
+        document.getElementById("api-response-products").textContent =
+          JSON.stringify(appData, null, 2);
+      }
+
+      function renderHomeFeatured() {
+        const grid = document.getElementById("home-featured-grid");
+        if (!grid) return;
+        grid.innerHTML = appData.products
+          .slice(0, 4)
+          .map(
+            (p) => `
+                <div class="group bg-[#FAF9F5] rounded-3xl p-4 border border-black/10 hover:border-black transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-64 bg-neutral-200 rounded-2xl mb-4 flex items-center justify-center font-bold text-neutral-400 relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">${p.badge}</span>
+                            <span class="text-xs uppercase tracking-wider">${p.name}</span>
+                        </div>
+                        <h3 class="font-black text-lg mb-1">${p.name}</h3>
+                        <p class="text-sm font-bold text-neutral-600 mb-4">$${p.price.toFixed(2)}</p>
+                    </div>
+                    <button onclick="addToCart(${p.id})" class="w-full py-3 bg-black text-white font-bold rounded-xl hover:bg-neutral-800 transition text-sm">Add to Cart</button>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      function renderShopGrid(filteredProducts = null) {
+        const grid = document.getElementById("shop-product-grid");
+        if (!grid) return;
+        const prods = filteredProducts || appData.products;
+        grid.innerHTML = prods
+          .map(
+            (p) => `
+                <div class="bg-white rounded-3xl p-4 border border-black/10 hover:border-black transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-64 bg-neutral-100 rounded-2xl mb-4 flex items-center justify-center font-bold text-neutral-400 relative overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-black text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">${p.badge}</span>
+                            <span class="text-xs uppercase tracking-wider">${p.category}</span>
+                        </div>
+                        <h3 class="font-black text-lg mb-1">${p.name}</h3>
+                        <p class="text-xs text-neutral-500 mb-3">${p.description}</p>
+                        <p class="text-sm font-bold text-neutral-900 mb-4">$${p.price.toFixed(2)}</p>
+                    </div>
+                    <button onclick="addToCart(${p.id})" class="w-full py-3 bg-black text-white font-bold rounded-xl hover:bg-neutral-800 transition text-sm">Add to Cart</button>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      function filterProducts(category) {
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.remove("bg-black", "text-white");
+          btn.classList.add("bg-white", "text-black");
+        });
+        event.target.classList.remove("bg-white", "text-black");
+        event.target.classList.add("bg-black", "text-white");
+
+        if (category === "all") {
+          renderShopGrid();
+        } else {
+          const filtered = appData.products.filter(
+            (p) => p.category === category,
+          );
+          renderShopGrid(filtered);
+        }
+      }
+
+      function searchProducts(query) {
+        const filtered = appData.products.filter(
+          (p) =>
+            p.name.toLowerCase().includes(query.toLowerCase()) ||
+            p.description.toLowerCase().includes(query.toLowerCase()),
+        );
+        renderShopGrid(filtered);
+      }
+
+      function renderFaqs() {
+        const container = document.getElementById("faq-container");
+        if (!container) return;
+        container.innerHTML = appData.faqs
+          .map(
+            (faq, i) => `
+                <div class="bg-white p-6 rounded-2xl border border-black/10">
+                    <h3 class="font-black text-lg mb-2">${faq.q}</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">${faq.a}</p>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      function addToCart(productId) {
+        const prod = appData.products.find((p) => p.id === productId);
+        if (!prod) return;
+        const existing = cart.find((item) => item.id === productId);
+        if (existing) {
+          existing.qty++;
+        } else {
+          cart.push({ ...prod, qty: 1 });
+        }
+        updateCartUI();
+        toggleCart();
+      }
+
+      function updateCartUI() {
+        const badge = document.getElementById("cart-badge");
+        const countHeader = document.getElementById("cart-count-header");
+        const itemsContainer = document.getElementById("cart-items");
+        const subtotalEl = document.getElementById("cart-subtotal");
+
+        const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+        const subtotal = cart.reduce(
+          (sum, item) => sum + item.price * item.qty,
+          0,
+        );
+
+        badge.textContent = totalCount;
+        countHeader.textContent = totalCount;
+        subtotalEl.textContent = "$" + subtotal.toFixed(2);
+
+        if (cart.length === 0) {
+          itemsContainer.innerHTML =
+            '<p class="text-neutral-500 text-center py-12">Your cart is empty.</p>';
+          return;
+        }
+
+        itemsContainer.innerHTML = cart
+          .map(
+            (item) => `
+                <div class="flex items-center justify-between bg-neutral-50 p-4 rounded-2xl border border-black/10">
+                    <div>
+                        <h4 class="font-bold text-sm">${item.name}</h4>
+                        <p class="text-xs text-neutral-500">$${item.price.toFixed(2)} × ${item.qty}</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="font-black text-sm">$${(item.price * item.qty).toFixed(2)}</span>
+                        <button onclick="removeFromCart(${item.id})" class="text-red-500 font-bold text-sm">×</button>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      function removeFromCart(id) {
+        cart = cart.filter((item) => item.id !== id);
+        updateCartUI();
+      }
+
+      function checkout() {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+        alert("Redirecting to secure checkout...");
+        cart = [];
+        updateCartUI();
+        toggleCart();
+      }
+
+      function previewImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("upload-preview-img").src = e.target.result;
+            document
+              .getElementById("image-preview-container")
+              .classList.remove("hidden");
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+
+      async function submitCustomOrder(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const orderData = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch("/api/custom-orders", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(orderData),
+          });
+          const result = await res.json();
+          alert(
+            `Success! Quote request submitted. Order ID: #${result.orderId}. We will review your artwork and email you shortly.`,
+          );
+          event.target.reset();
+          document
+            .getElementById("image-preview-container")
+            .classList.add("hidden");
+        } catch (e) {
+          alert("Custom order successfully queued in simulated backend!");
+          event.target.reset();
+        }
+      }
+
+      function submitContact(event) {
+        event.preventDefault();
+        alert("Thank you for reaching out! We have received your message.");
+        event.target.reset();
+      }
+
+      window.addEventListener("DOMContentLoaded", initApp);
+    </script>
+  </body>
+</html>
