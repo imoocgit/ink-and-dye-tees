@@ -2,72 +2,64 @@
  * Ink & Dye Tees - Scalable Node.js / Express Backend Architecture
  * Ready for SQLite (via better-sqlite3 or sqlite3) integration.
  */
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
+const express = require("express");
+const path = require("path");
+const fs = require("fs");
+
 const app = express();
+const PORT = process.env.PORT || 3000;
+
+const PUBLIC_DIR = path.join(__dirname, "..", "public");
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({ extended: true }));
+// app.use(express.static(path.join(__dirname, "..", "public")));
+// app.use(express.static(path.join(process.cwd(), "public")));
+app.use(express.static(PUBLIC_DIR));
 
-// Helper to read JSON data store (Easily replaceable with database queries later)
-const getData = () => {
-    const raw = fs.readFileSync(path.join(__dirname, '../data/products.json'), 'utf8');
-    return JSON.parse(raw);
-};
-
-const saveData = (data) => {
-    fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(data, null, 2));
-};
+// Data helper
+const dataFilePath = path.join(__dirname, "..", "data", "products.json");
+const getData = () => JSON.parse(fs.readFileSync(dataFilePath, "utf8"));
+const saveData = (data) =>
+  fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 
 // API Routes
-app.get('/api/products', (req, res) => {
-    const data = getData();
-    let results = data.products;
-    const { category, search } = req.query;
-    
-    if (category && category !== 'all') {
-        results = results.filter(p => p.category === category);
-    }
-    if (search) {
-        results = results.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
-    }
-    res.json({ success: true, count: results.length, data: results });
+app.get("/api/products", (req, res) => {
+  app.use("/assets", express.static(path.join(__dirname, "..", "/assets")));
+  const data = getData();
+  res.json(data.products);
 });
 
-app.get('/api/products/:id', (req, res) => {
-    const data = getData();
-    const product = data.products.find(p => p.id === parseInt(req.params.id));
-    if (!product) return res.status(404).json({ success: false, error: 'Product not found' });
-    res.json({ success: true, data: product });
+app.get("/api/orders", (req, res) => {
+  const data = getData();
+  res.json(data.orders || []);
 });
 
-app.post('/api/custom-orders', (req, res) => {
-    const order = req.body;
-    // Validation
-    if (!order.customer_name || !order.email || !order.size) {
-        return res.status(400).json({ success: false, error: 'Missing required fields' });
-    }
-    
-    // In production, save to SQLite `custom_orders` table:
-    // db.run(`INSERT INTO custom_orders (...) VALUES (...)`, [...]);
-    
-    res.json({ 
-        success: true, 
-        message: 'Custom order quote request received!', 
-        orderId: Math.floor(100000 + Math.random() * 900000),
-        estimatedPrice: order.estimatedPrice || 35.00
-    });
+app.post("/api/orders", (req, res) => {
+  const data = getData();
+  const newOrder = { id: Date.now(), ...req.body, createdAt: new Date() };
+  data.orders = data.orders || [];
+  data.orders.push(newOrder);
+  saveData(data);
+  res.json({ success: true, order: newOrder });
 });
 
-app.get('/api/faqs', (req, res) => {
-    const data = getData();
-    res.json({ success: true, data: data.faqs });
-});
+// Explicit Page Routing for Multi-Page Setup
+app.get("/", (req, res) => res.sendFile(path.join(PUBLIC_DIR, "index.html")));
+app.get("/shop", (req, res) =>
+  res.sendFile(path.join(PUBLIC_DIR, "shop.html")),
+);
+app.get("/custom", (req, res) =>
+  res.sendFile(path.join(PUBLIC_DIR, "custom.html")),
+);
+app.get("/about", (req, res) =>
+  res.sendFile(path.join(PUBLIC_DIR, "about.html")),
+);
+app.get("/faq", (req, res) => res.sendFile(path.join(PUBLIC_DIR, "faq.html")));
+app.get("/contact", (req, res) =>
+  res.sendFile(path.join(PUBLIC_DIR, "contact.html")),
+);
 
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Ink & Dye Tees server running on port ${PORT}`);
+  console.log(`⚡ Ink & Dye Tees server running at http://localhost:${PORT}`);
 });
-
-module.exports = app;

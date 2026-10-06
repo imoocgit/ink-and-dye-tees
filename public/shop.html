@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Designs — Ink & Dye Tees</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body
+    class="bg-[#FAF9F5] text-black font-sans min-h-screen flex flex-col justify-between"
+  >
+    <!-- Header injected here -->
+    <!-- [Include Header Template Code Here] -->
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-[#1A1A1A] text-[#FAF9F5] text-xs font-semibold py-2 px-4 text-center tracking-wider"
+    >
+      ⚡ FREE SHIPPING ON ORDERS OVER $75 • EVERY TEE IS 100% HAND-DYED & UNIQUE
+    </div>
+
+    <!-- Navigation Header -->
+    <header
+      class="sticky top-0 z-40 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-black/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="text-2xl font-black tracking-tighter flex items-center gap-2"
+        >
+          <span
+            class="w-4 h-4 rounded-full bg-[#D4FF00] border-2 border-black"
+          ></span>
+          INK & DYE <span class="text-neutral-500 font-light">TEES</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+          <a href="/" class="hover:text-black text-neutral-600 transition"
+            >Home</a
+          >
+          <a href="/shop" class="hover:text-black text-neutral-600 transition"
+            >Shop Designs</a
+          >
+          <a href="/custom" class="hover:text-black text-neutral-600 transition"
+            >Custom Order</a
+          >
+          <a href="/about" class="hover:text-black text-neutral-600 transition"
+            >About</a
+          >
+          <a href="/faq" class="hover:text-black text-neutral-600 transition"
+            >FAQ</a
+          >
+          <a
+            href="/contact"
+            class="hover:text-black text-neutral-600 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <button
+            onclick="toggleApiModal()"
+            class="hidden lg:flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-full bg-neutral-200 hover:bg-neutral-300 transition"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            API Inspector
+          </button>
+          <button
+            onclick="toggleCart()"
+            class="relative p-2.5 rounded-full bg-black text-[#FAF9F5] hover:bg-neutral-800 transition flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"
+              />
+            </svg>
+            <span
+              id="cart-badge"
+              class="absolute -top-1 -right-1 bg-[#D4FF00] text-black text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-black"
+              >0</span
+            >
+          </button>
+          <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#FAF9F5] border-b border-black/10 px-6 py-4 flex flex-col gap-4 font-medium"
+      >
+        <a href="/">Home</a>
+        <a href="/shop">Shop Designs</a>
+        <a href="/custom">Custom Order</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </header>
+    <!-- [END OF Include Header Template Code Here] -->
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full">
+      <div class="mb-8">
+        <h1 class="text-4xl font-black tracking-tight mb-2">
+          Shop All Designs
+        </h1>
+        <p class="text-neutral-600">
+          Browse our curated handmade drops and ready-to-ship artwork tees.
+        </p>
+      </div>
+      <!-- Product Grid -->
+      <div
+        id="shop-product-grid"
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+      >
+        <!-- Dynamically populated -->
+      </div>
+    </main>
+
+    <!-- Slide-over Cart Drawer -->
+    <div
+      id="cart-drawer"
+      class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#FAF9F5] border-l border-black/20 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col"
+    >
+      <div
+        class="p-6 border-b border-black/10 flex items-center justify-between"
+      >
+        <h3 class="font-black text-lg">Your Cart</h3>
+        <button onclick="toggleCart()" class="p-2 font-bold hover:text-red-500">
+          ✕
+        </button>
+      </div>
+      <div
+        id="cart-items-container"
+        class="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar"
+      ></div>
+      <div class="p-6 border-t border-black/10 bg-neutral-100">
+        <div class="flex justify-between font-bold mb-4">
+          <span>Subtotal</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button
+          onclick="alert('Checkout integration ready!')"
+          class="w-full py-3.5 bg-black text-[#D4FF00] font-black rounded-xl hover:bg-neutral-800 transition"
+        >
+          Checkout Now
+        </button>
+      </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script>
+      async function loadShopProducts() {
+        try {
+          const res = await fetch("/api/products");
+          const products = await res.json();
+          const grid = document.getElementById("shop-product-grid");
+          grid.innerHTML = products
+            .map(
+              (p) => `
+                    <div class="group border border-black/10 rounded-2xl p-4 bg-white hover:border-black transition flex flex-col justify-between">
+                        <div>
+                            <div class="relative overflow-hidden rounded-xl aspect-[4/5] mb-4 bg-neutral-100">
+                                <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="${p.name}">
+                                <span class="absolute top-3 left-3 bg-[#D4FF00] text-black text-[10px] font-black px-2.5 py-1 rounded-full border border-black">${p.badge}</span>
+                            </div>
+                            <h3 class="font-bold text-base mb-1">${p.name}</h3>
+                            <p class="text-neutral-500 text-sm mb-4">$${p.price.toFixed(2)}</p>
+                        </div>
+                        <button onclick="addToCart(${p.id}, '${p.name}', ${p.price}, '${p.image}')" class="w-full py-2.5 bg-black text-[#FAF9F5] font-bold text-sm rounded-xl hover:bg-[#D4FF00] hover:text-black border border-black transition">Add to Cart</button>
+                    </div>
+                `,
+            )
+            .join("");
+        } catch (err) {
+          console.error("Failed to load products", err);
+        }
+      }
+      loadShopProducts();
+    </script>
+  </body>
+</html>

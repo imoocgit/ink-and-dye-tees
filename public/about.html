@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Ink & Dye Tees</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              offwhite: "#F8F7F4",
+              charcoal: "#1E1E1E",
+              washedblack: "#121212",
+              lavender: "#D8C7FF",
+              lime: "#CCFF00",
+              lavenderDark: "#bfa4ff",
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              display: ['"Space Grotesk"', "sans-serif"],
+            },
+            boxShadow: {
+              genz: "4px 4px 0px #1E1E1E",
+              "genz-sm": "2px 2px 0px #1E1E1E",
+              "genz-lime": "4px 4px 0px #CCFF00",
+              "genz-lav": "4px 4px 0px #D8C7FF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <!-- <body    class="bg-[#FAF9F5] text-black font-sans min-h-screen flex flex-col justify-between"  > -->
+  <body
+    class="font-sans antialiased selection:bg-lime selection:text-charcoal min-h-screen flex flex-col justify-between"
+  >
+    <!-- Header injected here -->
+    <!-- [Include Header Template Code Here] -->
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-[#1A1A1A] text-[#FAF9F5] text-xs font-semibold py-2 px-4 text-center tracking-wider"
+    >
+      ⚡ FREE SHIPPING ON ORDERS OVER $75 • EVERY TEE IS 100% HAND-DYED & UNIQUE
+    </div>
+
+    <!-- Navigation Header -->
+    <header
+      class="sticky top-0 z-40 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-black/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <a
+          href="/"
+          class="text-2xl font-black tracking-tighter flex items-center gap-2"
+        >
+          <span
+            class="w-4 h-4 rounded-full bg-[#D4FF00] border-2 border-black"
+          ></span>
+          INK & DYE <span class="text-neutral-500 font-light">TEES</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+          <a href="/" class="hover:text-black text-neutral-600 transition"
+            >Home</a
+          >
+          <a href="/shop" class="hover:text-black text-neutral-600 transition"
+            >Shop Designs</a
+          >
+          <a href="/custom" class="hover:text-black text-neutral-600 transition"
+            >Custom Order</a
+          >
+          <a href="/about" class="hover:text-black text-neutral-600 transition"
+            >About</a
+          >
+          <a href="/faq" class="hover:text-black text-neutral-600 transition"
+            >FAQ</a
+          >
+          <a
+            href="/contact"
+            class="hover:text-black text-neutral-600 transition"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+          <button
+            onclick="toggleApiModal()"
+            class="hidden lg:flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-full bg-neutral-200 hover:bg-neutral-300 transition"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            API Inspector
+          </button>
+          <button
+            onclick="toggleCart()"
+            class="relative p-2.5 rounded-full bg-black text-[#FAF9F5] hover:bg-neutral-800 transition flex items-center justify-center"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"
+              />
+            </svg>
+            <span
+              id="cart-badge"
+              class="absolute -top-1 -right-1 bg-[#D4FF00] text-black text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-black"
+              >0</span
+            >
+          </button>
+          <button onclick="toggleMobileMenu()" class="md:hidden p-2">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#FAF9F5] border-b border-black/10 px-6 py-4 flex flex-col gap-4 font-medium"
+      >
+        <a href="/">Home</a>
+        <a href="/shop">Shop Designs</a>
+        <a href="/custom">Custom Order</a>
+        <a href="/about">About</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </header>
+    <!-- [END OF Include Header Template Code Here] -->
+
+    <!-- TAB 4: ABOUT -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full">
+      <div class="max-w-4xl mx-auto space-y-12">
+        <div class="text-center space-y-4">
+          <span
+            class="bg-lavender text-charcoal font-display font-bold text-xs uppercase px-3 py-1 rounded-full border-2 border-charcoal shadow-genz-sm inline-block"
+            >The Artist Story</span
+          >
+          <h1 class="font-display font-extrabold text-4xl sm:text-6xl">
+            Handmade, Never Mass-Produced.
+          </h1>
+          <p class="text-charcoal/80 text-lg max-w-2xl mx-auto">
+            Ink & Dye Tees was born out of a passion for subversive streetwear,
+            anime culture, and tactile textile art.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div
+            class="bg-charcoal text-offwhite p-8 rounded-3xl border-4 border-charcoal shadow-genz space-y-4"
+          >
+            <div
+              class="w-12 h-12 bg-lime text-charcoal font-black rounded-xl border-2 border-charcoal flex items-center justify-center text-xl"
+            >
+              <i class="fa-solid fa-hands-bubbles"></i>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-lime">
+              The Handmade Process
+            </h3>
+            <p class="text-offwhite/80 text-sm leading-relaxed">
+              Every single t-shirt is hand-tied, hand-dyed using eco-conscious
+              vibrant fiber-reactive dyes, and hand-painted or custom
+              heat-pressed with archival inks in small experimental batches in
+              our studio. No two shirts will ever look identical.
+            </p>
+          </div>
+          <div
+            class="bg-lavender p-8 rounded-3xl border-4 border-charcoal shadow-genz space-y-4"
+          >
+            <div
+              class="w-12 h-12 bg-charcoal text-lime font-black rounded-xl border-2 border-charcoal flex items-center justify-center text-xl"
+            >
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-charcoal">
+              Copyright & Ethics
+            </h3>
+            <p class="text-charcoal/80 text-sm leading-relaxed">
+              We respect intellectual property. All featured anime and
+              streetwear artwork is either original creations by our in-house
+              illustrators, properly licensed, or custom-printed directly from
+              customer-provided images and fan artwork permissions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Gallery of Process -->
+        <div class="space-y-6">
+          <h3 class="font-display font-extrabold text-2xl text-center">
+            Studio & Process Glimpse
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div
+              class="aspect-square bg-offwhite border-2 border-charcoal rounded-2xl overflow-hidden shadow-genz-sm"
+            >
+              <img
+                src="https://placehold.co/500x500/1E1E1E/CCFF00?text=Tie+Dye+Vat"
+                alt="Process 1"
+                class="w-full h-full object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+            <div
+              class="aspect-square bg-offwhite border-2 border-charcoal rounded-2xl overflow-hidden shadow-genz-sm"
+            >
+              <img
+                src="https://placehold.co/500x500/D8C7FF/1E1E1E?text=Hand+Painting"
+                alt="Process 2"
+                class="w-full h-full object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+            <div
+              class="aspect-square bg-offwhite border-2 border-charcoal rounded-2xl overflow-hidden shadow-genz-sm"
+            >
+              <img
+                src="https://placehold.co/500x500/CCFF00/1E1E1E?text=Final+Press"
+                alt="Process 3"
+                class="w-full h-full object-cover hover:scale-105 transition-transform"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Slide-over Cart Drawer -->
+    <div
+      id="cart-drawer"
+      class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#FAF9F5] border-l border-black/20 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col"
+    >
+      <div
+        class="p-6 border-b border-black/10 flex items-center justify-between"
+      >
+        <h3 class="font-black text-lg">Your Cart</h3>
+        <button onclick="toggleCart()" class="p-2 font-bold hover:text-red-500">
+          ✕
+        </button>
+      </div>
+      <div
+        id="cart-items-container"
+        class="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar"
+      ></div>
+      <div class="p-6 border-t border-black/10 bg-neutral-100">
+        <div class="flex justify-between font-bold mb-4">
+          <span>Subtotal</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button
+          onclick="alert('Checkout integration ready!')"
+          class="w-full py-3.5 bg-black text-[#D4FF00] font-black rounded-xl hover:bg-neutral-800 transition"
+        >
+          Checkout Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite border-t-4 border-charcoal mt-20">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <div class="space-y-4">
+          <a
+            href="/"
+            class="text-1xl font-black tracking-tighter flex items-center gap-2"
+          >
+            <span
+              class="w-4 h-4 rounded-full bg-[#D4FF00] border-2 border-black"
+            ></span>
+            INK & DYE <span class="text-neutral-500 font-light">TEES</span>
+          </a>
+          <p class="text-offwhite/70 text-xs">
+            Handmade, hand-dyed custom streetwear crafted for Gen Z art, anime,
+            and rebellious fashion fans.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lime mb-3">
+            Quick Navigation
+          </h4>
+          <ul class="space-y-2 text-xs font-semibold">
+            <li>
+              <a
+                href="/"
+                onclick="switchTab('home')"
+                class="hover:text-lime transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/shop"
+                onclick="switchTab('shop')"
+                class="hover:text-lime transition-colors"
+                >Shop Catalog</a
+              >
+            </li>
+            <li>
+              <a
+                href="/custom"
+                onclick="switchTab('custom')"
+                class="hover:text-lime transition-colors"
+                >Custom Tee Builder</a
+              >
+            </li>
+            <li>
+              <a
+                href="/about"
+                onclick="switchTab('about')"
+                class="hover:text-lime transition-colors"
+                >About Artist & Process</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lime mb-3">Customer Care</h4>
+          <ul class="space-y-2 text-xs font-semibold">
+            <li>
+              <a
+                href="/faq"
+                onclick="switchTab('faq')"
+                class="hover:text-lime transition-colors"
+                >Pricing & Turnaround</a
+              >
+            </li>
+            <li>
+              <a
+                href="/faq"
+                onclick="switchTab('faq')"
+                class="hover:text-lime transition-colors"
+                >Shipping & Returns</a
+              >
+            </li>
+            <li>
+              <a
+                href="#faq"
+                onclick="switchTab('faq')"
+                class="hover:text-lime transition-colors"
+                >Wash & Care Instructions</a
+              >
+            </li>
+            <li>
+              <a
+                href="#faq"
+                onclick="switchTab('faq')"
+                class="hover:text-lime transition-colors"
+                >Copyright & Licensing</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lime mb-3">Connect With Us</h4>
+          <div class="flex gap-3 mb-4">
+            <a
+              href="#"
+              class="w-9 h-9 bg-offwhite/10 text-offwhite hover:bg-lime hover:text-charcoal rounded-xl border border-offwhite/20 flex items-center justify-center transition-colors"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="w-9 h-9 bg-offwhite/10 text-offwhite hover:bg-lime hover:text-charcoal rounded-xl border border-offwhite/20 flex items-center justify-center transition-colors"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a
+              href="#"
+              class="w-9 h-9 bg-offwhite/10 text-offwhite hover:bg-lime hover:text-charcoal rounded-xl border border-offwhite/20 flex items-center justify-center transition-colors"
+              ><i class="fa-brands fa-discord"></i
+            ></a>
+          </div>
+          <p class="text-xs text-offwhite/50">
+            &copy; 2026 Ink & Dye Tees. All rights reserved. Original artwork &
+            custom designs protected.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

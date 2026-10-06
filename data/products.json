@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Neon Cyber Oni Oversized Tee",
       "category": "anime",
-      "price": 38.00,
+      "price": 38.0,
       "rating": 4.9,
       "image": "assets/images/oni.jpg",
       "badge": "Bestseller",
@@ -15,26 +15,26 @@
     },
     {
       "id": 2,
-      "name": "Muted Lavender Dreamscape",
+      "name": "helicopter",
       "category": "streetwear",
-      "price": 34.00,
+      "price": 34.0,
       "rating": 4.8,
-      "image": "assets/images/dreamscape.jpg",
+      "image": "assets/images/heli.jpg",
       "badge": "New Drop",
-      "description": "Soft gradient tie-dye tee in muted lavender and off-white tones with minimalist abstract eye illustration on the chest.",
+      "description": "Custom design of an Helicopter on a black hoodie.",
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["Lavender", "Off-White"],
       "inStock": true
     },
     {
       "id": 3,
-      "name": "Acid Smoke Graphic Tee",
+      "name": "Swords",
       "category": "art",
-      "price": 42.00,
+      "price": 42.0,
       "rating": 5.0,
-      "image": "assets/images/smoke.jpg",
+      "image": "assets/images/swords.jpg",
       "badge": "Limited 1/25",
-      "description": "Hand-painted organic smoke swirls using eco-friendly textile inks. Each piece features unique dye patterns.",
+      "description": "Hand-dyed image of swords with unique dye patterns.",
       "sizes": ["S", "M", "L", "XL"],
       "colors": ["Charcoal", "Washed Black"],
       "inStock": true
@@ -43,7 +43,7 @@
       "id": 4,
       "name": "Glitch ASCII Smiley Tee",
       "category": "streetwear",
-      "price": 30.00,
+      "price": 30.0,
       "rating": 4.7,
       "image": "assets/images/smiley.jpg",
       "badge": "Popular",
@@ -51,8 +51,41 @@
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["Off-White"],
       "inStock": true
+    },
+    {
+      "id": 5,
+      "name": "Neon Nebula Oversized Tee",
+      "category": "anime",
+      "price": 42.0,
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80",
+      "badge": "Bestseller"
+    },
+    {
+      "id": 6,
+      "name": "Cyberpunk Acid Wash Heavyweight",
+      "category": "streetwear",
+      "price": 48.0,
+      "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80",
+      "badge": "Limited Drop"
+    },
+    {
+      "id": 7,
+      "name": "Abstract Expressionism Hand-Painted Tee",
+      "category": "art",
+      "price": 55.0,
+      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&auto=format&fit=crop&q=80",
+      "badge": "1 of 1"
+    },
+    {
+      "id": 8,
+      "name": "Tokyo Midnight Spiral Dye",
+      "category": "anime",
+      "price": 45.0,
+      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80",
+      "badge": "Popular"
     }
   ],
+  "orders": [],
   "faqs": [
     {
       "q": "How does pricing work for custom tees?",
