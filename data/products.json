@@ -2,11 +2,11 @@
   "products": [
     {
       "id": 1,
-      "name": "Neon Cyber Oni Oversized Tee",
+      "name": "Bell UH1 Helicopter - Stylized bleach splatter pattern",
       "category": "anime",
       "price": 38.0,
       "rating": 4.9,
-      "image": "assets/images/oni.jpg",
+      "image": "assets/images/heli-2.jpg",
       "badge": "Bestseller",
       "description": "Hand-dyed washed black heavyweight cotton tee featuring an original hand-painted cyberpunk mask graphic with electric lime accent highlights.",
       "sizes": ["S", "M", "L", "XL", "2XL"],
@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "name": "helicopter",
+      "name": "Stealth Iroquois `Huey` - copper/light-brown tone",
       "category": "streetwear",
       "price": 34.0,
       "rating": 4.8,
@@ -28,7 +28,7 @@
     },
     {
       "id": 3,
-      "name": "Swords",
+      "name": "Troopers Drum & Bugle Corps",
       "category": "art",
       "price": 42.0,
       "rating": 5.0,
@@ -41,31 +41,31 @@
     },
     {
       "id": 4,
-      "name": "Glitch ASCII Smiley Tee",
+      "name": "Dark Angel",
       "category": "streetwear",
       "price": 30.0,
       "rating": 4.7,
-      "image": "assets/images/smiley.jpg",
+      "image": "assets/images/phoenix.png",
       "badge": "Popular",
-      "description": "Bold typography and glitch art printed and hand-distressed on an off-white heavy cotton relaxed fit tee.",
+      "description": "A popular style of wearable gothic and streetwear art created using freehand bleach-painting techniques.",
       "sizes": ["XS", "S", "M", "L", "XL"],
       "colors": ["Off-White"],
       "inStock": true
     },
     {
       "id": 5,
-      "name": "Neon Nebula Oversized Tee",
+      "name": "Crossed Cavalry Sabers.",
       "category": "anime",
       "price": 42.0,
-      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80",
+      "image": "assets/images/swords-2.jpg",
       "badge": "Bestseller"
     },
     {
       "id": 6,
-      "name": "Cyberpunk Acid Wash Heavyweight",
+      "name": "Wearable Gothic Dark Angel Bleach Hoodie",
       "category": "streetwear",
       "price": 48.0,
-      "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&auto=format&fit=crop&q=80",
+      "image": "assets/images/phoenix-3.png",
       "badge": "Limited Drop"
     },
     {
@@ -73,7 +73,7 @@
       "name": "Abstract Expressionism Hand-Painted Tee",
       "category": "art",
       "price": 55.0,
-      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&auto=format&fit=crop&q=80",
+      "image": "assets/images/next_drop-1.png",
       "badge": "1 of 1"
     },
     {
@@ -81,7 +81,7 @@
       "name": "Tokyo Midnight Spiral Dye",
       "category": "anime",
       "price": 45.0,
-      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80",
+      "image": "assets/images/next_drop.png",
       "badge": "Popular"
     }
   ],
