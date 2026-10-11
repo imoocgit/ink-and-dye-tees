@@ -8,9 +8,9 @@
     "db:init": "sqlite3 database/store.db < database/schema.sql"
   },
   "dependencies": {
+    "ejs": "^7.0.1",
     "express": "^4.19.2"
   },
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
