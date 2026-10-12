@@ -78,10 +78,50 @@
     },
     {
       "id": 8,
-      "name": "Tokyo Midnight Spiral Dye",
+      "name": "Misty Sigil",
       "category": "anime",
       "price": 45.0,
       "image": "assets/images/next_drop.png",
+      "badge": "Popular"
+    },
+    {
+      "id": 9,
+      "name": "Cyber Sigilism Orange Tan Bleach Hoodie",
+      "category": "streetwear",
+      "price": 48.0,
+      "image": "assets/images/next_drop-nano.png",
+      "badge": "Limited Drop"
+    },
+    {
+      "id": 10,
+      "name": "Skeletal Vanguard",
+      "category": "art",
+      "price": 55.0,
+      "image": "assets/images/Skeletal_Vanguard.png",
+      "badge": "1 of 1"
+    },
+    {
+      "id": 11,
+      "name": "Kneeling Angel",
+      "category": "anime",
+      "price": 45.0,
+      "image": "assets/images/kneeling-angel-stencil.webp",
+      "badge": "Popular"
+    },
+    {
+      "id": 12,
+      "name": "Angel",
+      "category": "anime",
+      "price": 45.0,
+      "image": "assets/images/angel.png",
+      "badge": "Popular"
+    },
+    {
+      "id": 13,
+      "name": "Intricate Fantasy Sword Design",
+      "category": "anime",
+      "price": 45.0,
+      "image": "assets/images/intricate-fantasy-sword-design.jpg",
       "badge": "Popular"
     }
   ],
